@@ -1,6 +1,6 @@
 <?php
 
-namespace Ang3\Bundle\AwsLambdaBundle\Service;
+namespace Ang3\Bundle\AwsLambdaBundle\Response;
 
 interface FunctionResponseInterface
 {

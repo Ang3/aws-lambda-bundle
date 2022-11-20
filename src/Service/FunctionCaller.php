@@ -4,6 +4,7 @@ namespace Ang3\Bundle\AwsLambdaBundle\Service;
 
 use Ang3\Bundle\AwsLambdaBundle\Exception\FunctionException;
 use Ang3\Bundle\AwsLambdaBundle\Exception\LambdaExceptionInterface;
+use Ang3\Bundle\AwsLambdaBundle\Response\FunctionResponse;
 use Aws\Lambda\LambdaClient;
 use Psr\Log\LoggerInterface;
 
