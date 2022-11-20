@@ -1,0 +1,22 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+
+  # Autowiring
+  Ang3\Bundle\AwsLambdaBundle\:
+    resource: '../../*'
+    exclude: '../../{DependencyInjection,Resources}'
+
+  # Lambda client
+  Aws\Lambda\LambdaClient:
+    arguments:
+      -
+        version: '%env(resolve:AWS_LAMBDA_VERSION)%'
+        region: '%env(resolve:AWS_LAMBDA_REGION)%'
+        credentials:
+          key: '%env(resolve:AWS_LAMBDA_KEY)%'
+          secret: '%env(resolve:AWS_LAMBDA_SECRET)%'
+  ang3.aws_lambda.client:
+    alias: Aws\Lambda\LambdaClient
+    public: true
